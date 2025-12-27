@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S79Y2FRX1H"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S79Y2FRX1H');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S79Y2FRX1H');
   </script>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv='content-language' content='en-US'>
-  <meta name="title" content="Blog - Visit India">
-  <meta name="description" content="Discover India's iconic landmarks through our travel blog.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com/blogs.html">
-  <meta property="og:title" content="Blog - Visit India">
-  <meta property="og:description" content="Discover India's iconic landmarks through our travel blog.">
-  <meta property="og:image" content="/images/preview.webp">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://yourwebsite.com/blogs.html">
-  <meta property="twitter:title" content="Blog - Visit India">
-  <meta property="twitter:description" content="Discover India's iconic landmarks through our travel blog.">
-  <meta property="twitter:image" content="/images/preview.webp">
 
-  <title>Blog</title>
-  <link rel="icon" type="image/x-icon" href="/images/tablogo.png">
+  <title>Blogs | Bharat Darshan</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">  
+  <link rel="icon" href="images/tablogo.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/blog.css">
 
   <style>
-    /* Fix for text padding */
-    .postcard__text {
-      padding: 0 40px;
-    }
+    .postcard__text { padding: 0 40px; }
   </style>
 </head>
-<body>
-  <div id="top"></div>
-<header class="header">
 
-<a href="index.html" class="logo">
-  <img src="images/tablogo.png" alt="Bharat Darshan Logo" style="height:80px;">  Bharat Darshan
-</a>
+<body>
+
+<div id="top"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="images/tablogo.png" alt="Logo" style="height:80px;">
+    Bharat Darshan
+  </a>
+
   <nav class="navbar">
     <div id="nav-close" class="fas fa-times"></div>
     <a href="index.html">home</a>
-    <a href="adventure.html">Adventure</a>
+    <a href="adventure.html">adventure</a>
     <a href="map.html">map</a>
     <a href="blogs.html">blogs</a>
-    <a href="events.html">Events</a>
-    <a href="products.html">Products</a>
+    <a href="events.html">events</a>
+    <a href="products.html">products</a>
     <a href="about.html">about us</a>
   </nav>
+
   <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
     <div id="search-btn" class="fas fa-search"></div>
   </div>
 </header>
 
+<!-- ================= SEARCH ================= -->
 <div class="search-form">
   <div id="close-search" class="fas fa-times"></div>
-  <form action="">
+  <form>
     <input type="search" placeholder="search here..." id="search-box">
     <label for="search-box" class="fas fa-search"></label>
   </form>
 </div>
+
 <div class="banner-area"></div>
 
+<!-- ================= BLOG SECTION ================= -->
 <section class="light">
   <div class="container py-2">
-    <div class="h1 text-center text-dark pb-4" id="pageHeaderTitle">Welcome To Our Blog</div>
+
+    <div class="h1 text-center text-dark pb-4" id="pageHeaderTitle">
+      Welcome To Our Blog
+    </div>
 
     <div class="text-center mb-4">
       <button class="btn btn-danger px-4" id="addBlogBtn">
@@ -82,169 +81,130 @@
       </button>
     </div>
 
-    <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="blogModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+    <!-- ===== BLOG MODAL ===== -->
+    <div class="modal fade" id="blogModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
+
           <div class="modal-header">
-            <h5 class="modal-title" id="blogModalLabel">Add Your Blog</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <h5 class="modal-title">Add Your Blog</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
             </button>
           </div>
+
           <div class="modal-body">
             <form id="blogForm">
               <div class="form-group">
-                <label for="blogTitle">Blog Title</label>
+                <label>Blog Title</label>
                 <input type="text" class="form-control" id="blogTitle" required>
               </div>
+
               <div class="form-group">
-                <label for="blogDescription">Blog Description</label>
-                <textarea class="form-control" id="blogDescription" rows="3" required></textarea>
+                <label>Blog Description</label>
+                <textarea class="form-control" id="blogDescription" rows="4" required></textarea>
               </div>
-              <div class="form-group">
-                <label for="blogImage">Upload Image</label>
-                <input type="file" class="form-control-file" id="blogImage" accept="image/*">
-              </div>
-              <div class="form-group">
-                <label for="blogVideo">Upload Video (optional)</label>
-                <input type="file" class="form-control-file" id="blogVideo" accept="video/*">
-              </div>
-              <button type="submit" class="btn btn-success">Submit Blog</button>
+
+              <button type="submit" class="btn btn-success">
+                Submit Blog
+              </button>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: -25px; right: 0; color: white; font-size: 2.5rem; opacity: 1;">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <video id="popupVideoPlayer" width="100%" controls></video>
-          </div>
+
         </div>
       </div>
     </div>
 
+    <!-- ===== BLOG CONTAINER ===== -->
+    <div id="blogContainer"></div>
 
-    <div id="blogContainer">
-      <article class="postcard light blue">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="images/closed-up-photo-of-pink-petaled-flower-wallpaper-preview.jpg" alt="Taj Mahal" />
-        </a>
-        <div class="postcard__text t-dark">
-          <h1 class="postcard__title blue"><a href="#">The Taj Mahal, Agra</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="2023-01-01 12:00:00">
-              <i class="fas fa-calendar-alt mr-2"></i>Mon, January 1st 2023
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">
-            The Taj Mahal, an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra...
-          </div>
-        </div>
-      </article>
-    </div>
   </div>
 </section>
 
+<!-- ================= TO TOP ================= -->
 <a href="#top" class="to-top">
   <i class="fas fa-chevron-up"></i>
 </a>
 
+<!-- ================= SCRIPTS ================= -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/allscript.js"></script>
 
+<!-- ================= BACKEND INTEGRATION ================= -->
 <script>
-document.getElementById("addBlogBtn").addEventListener("click", function(){
-  $('#blogModal').modal('show');
-});
+document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("blogForm").addEventListener("submit", function(e){
-  e.preventDefault();
+  const API_URL = "http://localhost:3000/blogs";
 
-  let title = document.getElementById("blogTitle").value;
-  let desc = document.getElementById("blogDescription").value;
-  let imageFile = document.getElementById("blogImage").files[0];
-  let videoFile = document.getElementById("blogVideo").files[0];
-  let now = new Date();
+  document.getElementById("addBlogBtn").addEventListener("click", function () {
+    $('#blogModal').modal('show');
+  });
 
-  let reader = new FileReader();
-  reader.onload = function(event){
-    let imgSrc = imageFile ? event.target.result : "";
-    let videoURL = videoFile ? URL.createObjectURL(videoFile) : "";
+  function loadBlogs() {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(blogs => {
+        const container = document.getElementById("blogContainer");
+        container.innerHTML = "";
 
-    let videoButtonHTML = videoFile ? `
-      <div class="mt-3">
-        <button class="btn watch-video-btn" data-video-src="${videoURL}">
-          <i class="fas fa-play mr-2"></i>Watch Video
-        </button>
-      </div>` : "";
-    
-    let imageHTML = imgSrc ? `
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="${imgSrc}" alt="${title}" />
-        </a>` : "";
-    
-    // *** FIX IS HERE ***
-    // Add a 'no-image' class to the article if imgSrc is missing
-    let articleClass = 'postcard light green';
-    if (!imgSrc) {
-        articleClass += ' no-image';
-    }
+        if (blogs.length === 0) {
+          container.innerHTML = "<p class='text-center'>No blogs yet. Be the first to add one!</p>";
+          return;
+        }
 
-    let blogHTML = `
-      <article class="${articleClass}">
-        ${imageHTML} 
-        <div class="postcard__text t-dark">
-          <h1 class="postcard__title green"><a href="#">${title}</a></h1>
-          <div class="postcard__subtitle small">
-            <time datetime="${now.toISOString()}">
-              <i class="fas fa-calendar-alt mr-2"></i>${now.toLocaleString()}
-            </time>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">
-            ${desc}
-            ${videoButtonHTML}
-          </div>
-        </div>
-      </article>
-    `;
+        blogs.forEach(blog => {
+          const blogHTML = `
+            <article class="postcard light blue">
+              <a class="postcard__img_link" href="#">
+                <img class="postcard__img"
+                     src="${blog.image || 'images/default-blog.jpg'}"
+                     alt="${blog.title}">
+              </a>
 
-    document.getElementById("blogContainer").insertAdjacentHTML("afterbegin", blogHTML);
-    $('#blogModal').modal('hide');
-    document.getElementById("blogForm").reset();
-  };
+              <div class="postcard__text t-dark">
+                <h1 class="postcard__title blue">
+                  <a href="#">${blog.title}</a>
+                </h1>
 
-  if(imageFile){
-    reader.readAsDataURL(imageFile);
-  } else {
-    reader.onload({ target: { result: "" }});
+                <div class="postcard__subtitle small">
+                  <i class="fas fa-calendar-alt mr-2"></i>
+                  ${new Date(blog.created_at).toLocaleString()}
+                </div>
+
+                <div class="postcard__bar"></div>
+
+                <div class="postcard__preview-txt">
+                  ${blog.description}
+                </div>
+              </div>
+            </article>
+          `;
+          container.insertAdjacentHTML("beforeend", blogHTML);
+        });
+      })
+      .catch(err => console.error("Error loading blogs:", err));
   }
-});
 
-// Event listener for video modal
-document.getElementById("blogContainer").addEventListener("click", function(e) {
-  const button = e.target.closest('.watch-video-btn');
-  if (button) {
-    const videoSrc = button.getAttribute("data-video-src");
-    const videoPlayer = document.getElementById("popupVideoPlayer");
-    videoPlayer.src = videoSrc;
-    $('#videoModal').modal('show');
-  }
-});
+  document.getElementById("blogForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-// Pause video when modal is closed
-$('#videoModal').on('hidden.bs.modal', function () {
-  const videoPlayer = document.getElementById("popupVideoPlayer");
-  videoPlayer.pause();
-  videoPlayer.src = "";
+    fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: blogTitle.value,
+        description: blogDescription.value,
+        image: "images/default-blog.jpg"
+      })
+    }).then(() => {
+      $('#blogModal').modal('hide');
+      blogForm.reset();
+      loadBlogs();
+    });
+  });
+
+  loadBlogs();
 });
 </script>
 
